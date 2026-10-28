@@ -1,0 +1,40 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-resonate-earth",
+  "nodeId": "RESONATE-EARTH",
+  "displayName": "Resonate Earth",
+  "declaredRegion": "placement pending",
+  "declaredRole": "public front door · Nebula Mesh · SOS Manifesto",
+  "declaredCanonicalUrl": "https://resonate.nexinus.net",
+  "capabilities": [
+    "PUBLIC_FRONT_DOOR",
+    "NEBULA_MESH",
+    "SOS_MANIFESTO"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAwMWHcloN6EGM57/WIOJAaR9GuVToXALMV1Xi27kzwGY=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "b1e7ccf3a85a9e64fa4d0732fcf745f56c0aa4290c1f01298597c66bbaf2a845",
+    "publicKeyFingerprintSha256": "b1e7ccf3a85a9e64fa4d0732fcf745f56c0aa4290c1f01298597c66bbaf2a845",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "b1e7ccf3a85a9e64fa4d0732fcf745f56c0aa4290c1f01298597c66bbaf2a845",
+    "identityDocumentSha256": "72d2b89e624a8fc194bc5b9c3326804e50506789e94c4d1fe5f982808759cd30",
+    "artifactSha256": "1c378737116fdaf6932f66806f43cc4e39b8d584400a13917779cc00639ebffe"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "993dadd62fa3d4f2edc2aac0b698a14a469d2f5532f6493bc4f92679113ad234",
+  "signature": "lFAdONPt33d3O3KwHCdk87eOGpn/vHPyrvh33Utfco85gqaTMDRqOd/axX4nJG41SxW4s8te9bzgrslG3ZBiBQ=="
+}

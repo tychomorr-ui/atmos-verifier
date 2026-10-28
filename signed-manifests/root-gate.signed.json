@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-root-gate",
+  "nodeId": "ROOT-GATE",
+  "displayName": "Root-Gate",
+  "declaredRegion": "N. Virginia",
+  "declaredRole": "sovereign gateway · identity anchor · front door",
+  "declaredCanonicalUrl": "https://rootgate.nexinus.net",
+  "capabilities": [
+    "IDENTITY_ANCHOR",
+    "GATEWAY"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAiwAmc5v8sy+TgQjRZd+k9xOWAphOJXfsy2i4GrU/Tow=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "03105cbe8e76825a79f18d0095d6be51ad8ad7e781b0a53cbcd2b7d335e45deb",
+    "publicKeyFingerprintSha256": "03105cbe8e76825a79f18d0095d6be51ad8ad7e781b0a53cbcd2b7d335e45deb",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "03105cbe8e76825a79f18d0095d6be51ad8ad7e781b0a53cbcd2b7d335e45deb",
+    "identityDocumentSha256": "4bb70865a882b5f8ab2561c787457ac4650843ec60748f2c8489afaaa01856db",
+    "artifactSha256": "cca1bb96decdd79828d452d3a6ee3c9494042a13df404120d685fe8b3375e34c"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "81cd8590cf75b1fa0e33950c8de1952c901408af014080041c642d768a702787",
+  "signature": "w7wkAtXi/6QaGdt/W4CPJH3VuXjuTPO7lEsBQsCVU4Bj4ZJ5Rd3uQwayTLMHAMNC4dKzowlvjPgENQfgN3djCg=="
+}

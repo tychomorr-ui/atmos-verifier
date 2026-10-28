@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-iwa-sage",
+  "nodeId": "IWA-SAGE",
+  "displayName": "IWA-SAGE",
+  "declaredRegion": "Montreal",
+  "declaredRole": "community wellness · service layer",
+  "declaredCanonicalUrl": "https://iwa.nexinus.net",
+  "capabilities": [
+    "COMMUNITY_WELLNESS",
+    "SERVICE_LAYER"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAL5oPZO5e+t94Ab3acrp9aPpocrvyLZfdi8mB6KkaDRc=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "82226ef2e86fed469c1ea959684ee67e436f14a0175d60e5202b666e939293d7",
+    "publicKeyFingerprintSha256": "82226ef2e86fed469c1ea959684ee67e436f14a0175d60e5202b666e939293d7",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "82226ef2e86fed469c1ea959684ee67e436f14a0175d60e5202b666e939293d7",
+    "identityDocumentSha256": "2691700c8318cc386367897fc014ecfbbeaec0417a8c7973021196c2c348e13a",
+    "artifactSha256": "6500a1b5c0ba6405b3c5dcf00f06cd7b29d42299e9e5ccadf18bbfc128269c7e"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "c8fdc4dd049784ea85593ca3b7349ddcc431ea4d9a9c6b29d19bbfc2f257285b",
+  "signature": "y+hu7Dg2WLSzbT8LBnbnLZ5rxb1kA9OFscTTbO5esCajkqkhH7xCOnUgoAt3LLPHidcxPQwALfBfiRio1SO6BA=="
+}

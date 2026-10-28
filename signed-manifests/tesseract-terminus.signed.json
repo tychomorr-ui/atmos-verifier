@@ -1,0 +1,42 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-tesseract-terminus",
+  "nodeId": "TESSERACT-TERMINUS",
+  "displayName": "Tesseract-Terminus",
+  "declaredRegion": "Spain",
+  "declaredRole": "provenance · anchoring · Mirror",
+  "declaredCanonicalUrl": "https://terminus.nexinus.net",
+  "capabilities": [
+    "PROVENANCE",
+    "ANCHORING",
+    "MIRROR"
+  ],
+  "distinctFrom": [
+    "TESSERACT-A"
+  ],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAMUYFkl/Da5rPMVb/AfUS0lS8IEBHel3Ybu68uEHM3RU=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "1b608565008bd72768dfa4679e5fa947098bad451becf0d3fe87498da64edfe2",
+    "publicKeyFingerprintSha256": "1b608565008bd72768dfa4679e5fa947098bad451becf0d3fe87498da64edfe2",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "1b608565008bd72768dfa4679e5fa947098bad451becf0d3fe87498da64edfe2",
+    "identityDocumentSha256": "324960264b91452edb63c555c075fc66c70689abf2c81028c44da0d713cf6a95",
+    "artifactSha256": "6595a4785638f07a68a4d5d239b384ef2db2ab3eaab024fd8bac3c9c3c50044d"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "0ad1f8b120e80e948127e69bcdd5525ea0780a169056cbd1d2caa3c4eb2aecb5",
+  "signature": "ngt+U+Tm6HtaI/bH2+uimbRDAte3QvP3vnQo86WM1HOh2b0OUwUA2eDHQbLHUjnTPIm5wf6OhocqXbfa8yeeCA=="
+}

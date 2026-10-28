@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-keira",
+  "nodeId": "KEIRA",
+  "displayName": "KEIRA",
+  "declaredRegion": "São Paulo",
+  "declaredRole": "intelligence · truth analysis",
+  "declaredCanonicalUrl": "https://keira.nexinus.net",
+  "capabilities": [
+    "INTELLIGENCE",
+    "TRUTH_ANALYSIS"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "KEIRA_APPLICATION_KEY_IS_SEPARATE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAC83+iFFC4ydqbwnkO87JTpQBWiTB7N/btmZRVN8S5+o=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "1373ae6885b649909b5e0740d06561f7f84ec8075a9f51cd50cfa1f229530ab8",
+    "publicKeyFingerprintSha256": "1373ae6885b649909b5e0740d06561f7f84ec8075a9f51cd50cfa1f229530ab8",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "1373ae6885b649909b5e0740d06561f7f84ec8075a9f51cd50cfa1f229530ab8",
+    "identityDocumentSha256": "6dd4dc08f3c200dbb75e2f8b0b66c96c141ecb7275ff45ba65594bb40ea19ca9",
+    "artifactSha256": "f9d2a3a4974f23c64dfb2c2c7641ae865a4f4a8a67b766c0758c570abfdb0c60"
+  },
+  "signedAt": "2026-10-27T20:15:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "fdec4bde3f9ee5160d215e8ff97fa3fae32cd303586bdc8fb030e19c6e2b2c1d",
+  "signature": "S6M/nOE5/zGtI0PUzneZOD90FKR07CNt/uEEob/OKJvilNsHke1+J7jWYJMzTcAbyN8y2AEAPi7pqsr9bqapDg=="
+}

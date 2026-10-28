@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-monarch-os",
+  "nodeId": "MONARCH-OS",
+  "displayName": "Monarch-OS",
+  "declaredRegion": "Singapore",
+  "declaredRole": "sovereign OS layer · Kether-Gate",
+  "declaredCanonicalUrl": "https://monarch.nexinus.net",
+  "capabilities": [
+    "SOVEREIGN_OS",
+    "KETHER_GATE"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAJLRiN0X+GDtypD22fZztCKMjeI1Vku/5kxnBYpcPKhc=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "d0d43070befd86ed1bab4b6609e7228ca760a969e9a4ac59a2a8c1866f8c82b6",
+    "publicKeyFingerprintSha256": "d0d43070befd86ed1bab4b6609e7228ca760a969e9a4ac59a2a8c1866f8c82b6",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "d0d43070befd86ed1bab4b6609e7228ca760a969e9a4ac59a2a8c1866f8c82b6",
+    "identityDocumentSha256": "e8aa914ae731184e1c6241cc5ddf0dd7e137bb0e69d27631bcbdbba10cf52e00",
+    "artifactSha256": "32f2e587be0d5bf3d0a8d63afb20b080f370807da2d87b1aee6d7854124f78e0"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "1af2d3f493970ca87e9423e3d4b1bfa596ae36fbae98644235b9702c494c4f31",
+  "signature": "YzTAMEPsBPDPduh/oMQkUnVB73wW6V1WZyyjuQmZGLs1LFOVc8XwyY4mk7aOFLkpJ02G0jiguF7s8/v/rDp5Cg=="
+}

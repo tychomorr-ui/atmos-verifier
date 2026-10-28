@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-project-reclaim",
+  "nodeId": "PROJECT-RECLAIM",
+  "displayName": "Project Reclaim",
+  "declaredRegion": "Oregon",
+  "declaredRole": "field activation · real-world impact",
+  "declaredCanonicalUrl": "https://reclaim-node.nexinus.net",
+  "capabilities": [
+    "FIELD_ACTIVATION",
+    "REAL_WORLD_IMPACT"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA7sD8PzFz+dIfqhc/uQ/2HxWmrPU2xAw6PV00KO82bWs=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "fb5c32de094dfceb16f4181aa1ba7ced0b7cd87bdae651696e42a21d934158d3",
+    "publicKeyFingerprintSha256": "fb5c32de094dfceb16f4181aa1ba7ced0b7cd87bdae651696e42a21d934158d3",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "fb5c32de094dfceb16f4181aa1ba7ced0b7cd87bdae651696e42a21d934158d3",
+    "identityDocumentSha256": "ff9d51267035afbd992ca661ef919926249c81eaa085f119e70f75e143456d52",
+    "artifactSha256": "75c9b7490e2718f3ac6551304656a07b07112d78764976657fd9bad8bea0ae44"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "fa41a2ed92270f63c284067e1856cb490a621885fddc55044edf88f797289b2b",
+  "signature": "rteWAUYJ2YlSz3C0AGv5LlYQ3U7Rq9J36aOB5WA9sv/NXK4OlOYZoGu0Nr470rm3HttPS5+ui2UUw2XiFAKoAA=="
+}

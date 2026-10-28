@@ -1,0 +1,39 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-xinus-clarity",
+  "nodeId": "XINUS-CLARITY",
+  "displayName": "XinUS-Clarity",
+  "declaredRegion": "Ireland",
+  "declaredRole": "XinUS Clarity Suite",
+  "declaredCanonicalUrl": "https://clarity.nexinus.net",
+  "capabilities": [
+    "APPLICATION_LAYER",
+    "CLARITY"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAuVjs0jifCLjm2v6W5bLUXUJ1RLrM8rgVWhtD7RR3u84=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "a1ca21adaec0d2bd143aff32f3377b86e425e3e270e04606624ff3472b0564f1",
+    "publicKeyFingerprintSha256": "a1ca21adaec0d2bd143aff32f3377b86e425e3e270e04606624ff3472b0564f1",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "a1ca21adaec0d2bd143aff32f3377b86e425e3e270e04606624ff3472b0564f1",
+    "identityDocumentSha256": "5d1ebdbdf1f98692b9a63b7be0a5e017af6496b42eda4399e52e847f742b083d",
+    "artifactSha256": "8b2c0612674263c1dcac38ec3136f7b1ffcaccc99552739b5bc9ee3d9cc3ee65"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "f2a83314fd02028deb5f423dad73b63482dd0e7e21fc59219905e60dc05835f1",
+  "signature": "b0g0BPE2o+iaFSk3+0V/XUv5djPh/5YAbe7/jmSdwJRVaZdff/w2SXalRz67KcglPrKZxMTpA5egqwFmxg0BCg=="
+}

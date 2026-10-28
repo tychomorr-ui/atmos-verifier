@@ -1,0 +1,172 @@
+{
+  "schema": "NEXINUS_ATMOS_NODE_DECLARATIONS/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "protocol": "Ed25519-canonical-json",
+  "signerReference": "operator-atmos-ed25519-controlled-20261027",
+  "boundary": "Declarations select names and URLs. They do not prove the remote host serves this key.",
+  "nodes": [
+    {
+      "nodeId": "ROOT-GATE",
+      "displayName": "Root-Gate",
+      "declaredRegion": "N. Virginia",
+      "declaredRole": "sovereign gateway · identity anchor · front door",
+      "declaredCanonicalUrl": "https://rootgate.nexinus.net",
+      "capabilities": [
+        "IDENTITY_ANCHOR",
+        "GATEWAY"
+      ],
+      "supersededCanonicalUrls": [
+        "https://rootgate.manus.space"
+      ]
+    },
+    {
+      "nodeId": "TESSERACT-TERMINUS",
+      "displayName": "Tesseract-Terminus",
+      "declaredRegion": "Spain",
+      "declaredRole": "provenance · anchoring · Mirror",
+      "declaredCanonicalUrl": "https://terminus.nexinus.net",
+      "capabilities": [
+        "PROVENANCE",
+        "ANCHORING",
+        "MIRROR"
+      ],
+      "distinctFrom": [
+        "TESSERACT-A"
+      ],
+      "supersededCanonicalUrls": [
+        "https://universaltruth.life"
+      ]
+    },
+    {
+      "nodeId": "XINUS-CLARITY",
+      "displayName": "XinUS-Clarity",
+      "declaredRegion": "Ireland",
+      "declaredRole": "XinUS Clarity Suite",
+      "declaredCanonicalUrl": "https://clarity.nexinus.net",
+      "capabilities": [
+        "APPLICATION_LAYER",
+        "CLARITY"
+      ],
+      "supersededCanonicalUrls": [
+        "https://exonissuite-ceruhtwo.manus.space"
+      ]
+    },
+    {
+      "nodeId": "MONARCH-OS",
+      "displayName": "Monarch-OS",
+      "declaredRegion": "Singapore",
+      "declaredRole": "sovereign OS layer · Kether-Gate",
+      "declaredCanonicalUrl": "https://monarch.nexinus.net",
+      "capabilities": [
+        "SOVEREIGN_OS",
+        "KETHER_GATE"
+      ],
+      "supersededCanonicalUrls": [
+        "https://schedtool-7vbikw4h.manus.space"
+      ]
+    },
+    {
+      "nodeId": "TESSERACT-A",
+      "displayName": "Tesseract Mirror",
+      "declaredRegion": "Frankfurt",
+      "declaredRole": "truth substrate · truth point",
+      "declaredCanonicalUrl": "https://tesseract.nexinus.net",
+      "capabilities": [
+        "TRUTH_SUBSTRATE",
+        "TRUTH_POINT"
+      ],
+      "distinctFrom": [
+        "TESSERACT-TERMINUS",
+        "TESSERACT-A-CORE"
+      ],
+      "capabilityBoundary": "Tesseract Mirror is the constellation node. It is not the Tesseract-A Core verifier capability associated with ARCHANGEL.",
+      "supersededCanonicalUrls": [
+        "https://tesseract.manus.space"
+      ]
+    },
+    {
+      "nodeId": "KEIRA",
+      "displayName": "KEIRA",
+      "declaredRegion": "São Paulo",
+      "declaredRole": "intelligence · truth analysis",
+      "declaredCanonicalUrl": "https://keira.nexinus.net",
+      "supersededCanonicalUrls": [
+        "https://sovereignapp-hkcgwye7.manus.space"
+      ],
+      "capabilities": [
+        "INTELLIGENCE",
+        "TRUTH_ANALYSIS"
+      ],
+      "applicationBoundary": "KEIRA_APPLICATION_KEY_IS_SEPARATE"
+    },
+    {
+      "nodeId": "VALKYRIE",
+      "displayName": "Valkyrie",
+      "declaredRegion": "Stockholm",
+      "declaredRole": "adjudication entity · dark mirror · VERDEX deck",
+      "declaredCanonicalUrl": "https://valkyrie.nexinus.net",
+      "capabilities": [
+        "ADJUDICATION",
+        "DARK_MIRROR",
+        "VERDEX"
+      ]
+    },
+    {
+      "nodeId": "ARCHANGEL",
+      "displayName": "ARCHANGEL",
+      "declaredRegion": "London",
+      "declaredRole": "control plane · mesh governance",
+      "declaredCanonicalUrl": "https://archangel.nexinus.net",
+      "capabilities": [
+        "CONTROL_PLANE",
+        "MESH_GOVERNANCE"
+      ],
+      "supersededCanonicalUrls": [
+        "https://archangelcp-sbwmjhce.manus.space"
+      ]
+    },
+    {
+      "nodeId": "PROJECT-RECLAIM",
+      "displayName": "Project Reclaim",
+      "declaredRegion": "Oregon",
+      "declaredRole": "field activation · real-world impact",
+      "declaredCanonicalUrl": "https://reclaim-node.nexinus.net",
+      "capabilities": [
+        "FIELD_ACTIVATION",
+        "REAL_WORLD_IMPACT"
+      ],
+      "supersededCanonicalUrls": [
+        "https://reclaimporta-gsio8jvp.manus.space"
+      ]
+    },
+    {
+      "nodeId": "IWA-SAGE",
+      "displayName": "IWA-SAGE",
+      "declaredRegion": "Montreal",
+      "declaredRole": "community wellness · service layer",
+      "declaredCanonicalUrl": "https://iwa.nexinus.net",
+      "capabilities": [
+        "COMMUNITY_WELLNESS",
+        "SERVICE_LAYER"
+      ],
+      "supersededCanonicalUrls": [
+        "https://iwawellness-khqgjzqe.manus.space"
+      ]
+    },
+    {
+      "nodeId": "RESONATE-EARTH",
+      "displayName": "Resonate Earth",
+      "declaredRegion": "placement pending",
+      "declaredRole": "public front door · Nebula Mesh · SOS Manifesto",
+      "declaredCanonicalUrl": "https://resonate.nexinus.net",
+      "capabilities": [
+        "PUBLIC_FRONT_DOOR",
+        "NEBULA_MESH",
+        "SOS_MANIFESTO"
+      ],
+      "supersededCanonicalUrls": [
+        "https://resonate-earth.live"
+      ]
+    }
+  ]
+}

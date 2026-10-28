@@ -1,0 +1,40 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-valkyrie",
+  "nodeId": "VALKYRIE",
+  "displayName": "Valkyrie",
+  "declaredRegion": "Stockholm",
+  "declaredRole": "adjudication entity · dark mirror · VERDEX deck",
+  "declaredCanonicalUrl": "https://valkyrie.nexinus.net",
+  "capabilities": [
+    "ADJUDICATION",
+    "DARK_MIRROR",
+    "VERDEX"
+  ],
+  "distinctFrom": [],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAubRN4nbkR5GaymNxne33FqZH6J8Zg06a7R6UPDp1BsU=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "128e6fde1f76204a5bca2075f76c43fd5ab89e6d331e9e6abd5e95ce59c0df03",
+    "publicKeyFingerprintSha256": "128e6fde1f76204a5bca2075f76c43fd5ab89e6d331e9e6abd5e95ce59c0df03",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "128e6fde1f76204a5bca2075f76c43fd5ab89e6d331e9e6abd5e95ce59c0df03",
+    "identityDocumentSha256": "7110fd11320f34e957b61d3e851008f7b745432ad98696a612ab1affe4dc5720",
+    "artifactSha256": "182d785866276bb5ea2fcbad2eafc4c992c3a06e1240866e613d6f45c86d897f"
+  },
+  "signedAt": "2026-10-27T20:15:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "0108ceb871960fc1121e3bc307c5f9e425030d0d8642bfba7ce001f5ea217635",
+  "signature": "DKiJp5RfdoegbaOu6F/ObH8Du9qg2KMllrZYi+O7jqe3Q/J7i+QvunNYIBSZ4e814QMsFxoYfxbTTSxssfZsAw=="
+}

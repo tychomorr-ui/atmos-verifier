@@ -1,0 +1,42 @@
+{
+  "schema": "NEXINUS_ATMOS_SIGNED_NODE_MANIFEST/v1",
+  "manifestVersion": "ATMOS-1.1.1",
+  "manifestId": "atmos-node-tesseract-a",
+  "nodeId": "TESSERACT-A",
+  "displayName": "Tesseract Mirror",
+  "declaredRegion": "Frankfurt",
+  "declaredRole": "truth substrate · truth point",
+  "declaredCanonicalUrl": "https://tesseract.nexinus.net",
+  "capabilities": [
+    "TRUTH_SUBSTRATE",
+    "TRUTH_POINT"
+  ],
+  "distinctFrom": [
+    "TESSERACT-TERMINUS",
+    "TESSERACT-A-CORE"
+  ],
+  "applicationBoundary": "NONE",
+  "identity": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAR6fVSEZaoxf5Ms7ShPQFWdGEIq0jg5g6oXFY9AFBWZY=\n-----END PUBLIC KEY-----\n",
+    "identityHash": "2e0ad6e44a2f3005f997a471a964909f505e660bb55219e126ce4f974579b193",
+    "publicKeyFingerprintSha256": "2e0ad6e44a2f3005f997a471a964909f505e660bb55219e126ce4f974579b193",
+    "signerReference": "operator-atmos-ed25519-controlled-20261027"
+  },
+  "hashes": {
+    "publicKeyFingerprintSha256": "2e0ad6e44a2f3005f997a471a964909f505e660bb55219e126ce4f974579b193",
+    "identityDocumentSha256": "cb167b9434c773bd688e6db0442b6e4984337087373fac7041931becc3986b8d",
+    "artifactSha256": "06fa1dc6a02bfbc782c6a13e4b32d9a31e86266be7bb9cb4dafee68dbf6d231c"
+  },
+  "signedAt": "2026-10-27T20:40:00Z",
+  "verification": {
+    "manifestStatus": "SIGNED_PUBLIC_MANIFEST",
+    "headStatus": "NOT_RUN",
+    "trustState": "SIGNED_NOT_PROBED",
+    "authority": "NOT_CONFIGURED",
+    "network": "UNKNOWN"
+  },
+  "boundary": "SIGNATURE_PROVES_CONTROL_OF_KEY_ONLY",
+  "payloadHash": "30b9177dec1a9b487916b89e0d63afd1638931bb1e3237038aaa2384aedb4707",
+  "signature": "cM25Gboq4+RzUJyj9O235q21RGoeBkydzvyqGqojLfwIFF1EIYv1hmj6BzKIPF5Ka4hyxL1/XvslPxPRx5NmAA=="
+}

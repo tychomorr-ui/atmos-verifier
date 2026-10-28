@@ -1,0 +1,17 @@
+{
+  "schema": "NEXINUS_ATMOS_GOVERNANCE/v1",
+  "nodeId": "ARCHANGEL",
+  "manifestVersion": "ATMOS-1.1.1",
+  "policy": "PUBLIC_NOOP_ONLY",
+  "endpoint": "https://archangel.nexinus.net/governance/noop",
+  "accepts": [
+    "NOOP"
+  ],
+  "replay": "REJECT_DUPLICATE_REQUEST_HASH",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAK4tYXT9RHNgOv/5YacGaFxjmmcCQaVj10TXDNMdnqcc=\n-----END PUBLIC KEY-----\n",
+  "publicKeyFingerprintSha256": "5a7d0be5747b2a61bbe4a5d95772ae50a469688e85d40028b501c893dea2013a",
+  "signedAt": "2026-10-28T17:20:00Z",
+  "boundary": "A signed NOOP does not mutate any node. It proves this control-plane key can verify a caller and reject a replay.",
+  "payloadHash": "844e212730668567eebae556de26fc00f5dd56d16fe91232528fe3db2bbbe67d",
+  "signature": "KrYomGMa+rbmn2u1ooaUXQ00eJe/BiqnNmW04gO1rWJwT2mxyMCIYkWGRxq2cogcthoz09ZJAbpLFTyUSOOTCA=="
+}
