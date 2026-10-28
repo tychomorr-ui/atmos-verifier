@@ -1,7 +1,7 @@
 {
   "schema": "NEXINUS_ATMOS_EXPECTED_IDENTITY_HASHES/v2",
   "manifestVersion": "ATMOS-1.1.1",
-  "generatedAt": "2026-10-27T20:40:00Z",
+  "generatedAt": "2026-10-28T17:41:00Z",
   "signerReference": "operator-atmos-ed25519-controlled-20261027",
   "fields": [
     "publicKeyFingerprintSha256",
@@ -56,8 +56,8 @@
     "ARCHANGEL": {
       "publicKeyFingerprintSha256": "5a7d0be5747b2a61bbe4a5d95772ae50a469688e85d40028b501c893dea2013a",
       "identityDocumentSha256": "1500ade86f2a139ee3c4e6b63dc8bbbb488d7c4a6e234fb99bc7aee1e9c102d9",
-      "manifestPayloadSha256": "f65be7bf2d03cb719889a2fdac8f9c734d825cfa95a2bb1abdcdf8c95d7b4b2c",
-      "artifactSha256": "05c780ea17cc1f9864d79bca2f50e0aa46bd640fd696f7431262fbed8cd4bdc1"
+      "manifestPayloadSha256": "0473483282537b98f69786bff49d3b6be7c4280861788f10ec4618e89709145f",
+      "artifactSha256": "9b2cc7cb595308a20ef9e7d148aeeb17ee4f4d04dae13eebf50a41ce322fe33b"
     },
     "PROJECT-RECLAIM": {
       "publicKeyFingerprintSha256": "fb5c32de094dfceb16f4181aa1ba7ced0b7cd87bdae651696e42a21d934158d3",

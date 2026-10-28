@@ -22,6 +22,12 @@ node ./prove-governance-noop.mjs
 
 That generates a throwaway key, submits one signed `NOOP`, and submits the same request again. The first decision must be `ACCEPTED`. The second must be a signed `REJECTED` / `REPLAY`. A `NOOP` changes no node.
 
+```bash
+node ./prove-governance-admit.mjs
+```
+
+That checks a signed admission, its replay rejection, a second admission of the same node, and rejection of an existing canonical node. Admission does not publish DNS.
+
 ## Canonical endpoints
 
 | Node | Endpoint |
@@ -38,4 +44,4 @@ That generates a throwaway key, submits one signed `NOOP`, and submits the same 
 | IWA-SAGE | https://iwa.nexinus.net |
 | Resonate Earth | https://resonate.nexinus.net |
 
-KEIRA and VALKYRIE bind their measured running application bundles. The other nine bind published identity artifacts. That distinction is in `expected-identity-hashes.json` and is not a claim that every historical application has moved.
+KEIRA, VALKYRIE, and ARCHANGEL bind measured running files. The other eight bind published identity artifacts. That distinction is in `expected-identity-hashes.json` and is not a claim that every historical application has moved.
