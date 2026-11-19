@@ -9,7 +9,7 @@
     "manifestPayloadSha256",
     "artifactSha256"
   ],
-  "boundary": "publicKeyFingerprintSha256 is the SPKI hash. identityDocumentSha256 is the identity file hash. They are not interchangeable. artifactSha256 is the SHA-256 of a reproduced running bundle only where that bundle was measured; otherwise it stays null.",
+  "boundary": "publicKeyFingerprintSha256 is the SPKI hash. identityDocumentSha256 is the identity file hash. They are not interchangeable. artifactSha256 is the SHA-256 of a reproduced running bundle only where that bundle was measured; otherwise it stays null. Quantus uses QUANTUS_WITNESS_STATUS/v1 and does not yet claim an ATMOS signed-manifest or artifact measurement.",
   "nodes": {
     "ROOT-GATE": {
       "publicKeyFingerprintSha256": "03105cbe8e76825a79f18d0095d6be51ad8ad7e781b0a53cbcd2b7d335e45deb",
@@ -76,6 +76,14 @@
       "identityDocumentSha256": "72d2b89e624a8fc194bc5b9c3326804e50506789e94c4d1fe5f982808759cd30",
       "manifestPayloadSha256": "993dadd62fa3d4f2edc2aac0b698a14a469d2f5532f6493bc4f92679113ad234",
       "artifactSha256": "1c378737116fdaf6932f66806f43cc4e39b8d584400a13917779cc00639ebffe"
+    },
+    "QUANTUS": {
+      "publicKeyFingerprintSha256": "c3e9568197203345e7094734515fd02e1a2ddfe3606e282541027d2bda70e9b7",
+      "identityDocumentSha256": null,
+      "manifestPayloadSha256": null,
+      "artifactSha256": null,
+      "source": "operator-supplied signed QUANTUS_WITNESS_STATUS/v1 observation; full ATMOS manifest/artifact measurement pending",
+      "publicKeyHex": "e1a46ee1a698c466d72cb73ec13c55f900b07666a41d5d96250933df378c5efa"
     }
   }
 }

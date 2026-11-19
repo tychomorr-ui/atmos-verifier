@@ -3,6 +3,7 @@ import { createPublicKey, verify } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { canonicalJson, publicKeyFingerprint, sha256Hex, verifySignedManifest } from "./atmos-canonical.mjs";
+import { fetchQuantusWitnessStatus, verifyQuantusWitnessStatus } from "./quantus-witness-adapter.mjs";
 
 const root = process.cwd();
 const allowNetwork = process.env.ATMOS_ALLOW_NETWORK === "1";
@@ -77,8 +78,41 @@ function healthMatches(health, manifest, fingerprint) {
 const results = [];
 for (const node of declarations.nodes) {
   const slug = fileNode(node.nodeId);
-  const manifest = JSON.parse(await readFile(resolve(manifestDir, `${slug}.signed.json`), "utf8"));
   const expectedNode = expected.nodes[node.nodeId];
+  if (node.verificationMode === "QUANTUS_SIGNED_STATUS") {
+    let witnessProbe = null;
+    let verification = { valid: false, reason: "NETWORK_NOT_AUTHORIZED" };
+    if (allowNetwork) {
+      try {
+        witnessProbe = await fetchQuantusWitnessStatus(node.declaredCanonicalUrl);
+        verification = verifyQuantusWitnessStatus(witnessProbe.parsed, expectedNode.publicKeyFingerprintSha256);
+      } catch (error) {
+        witnessProbe = { statusCode: null, bodySha256: null, parsed: null, error: errorText(error) };
+      }
+    }
+    const status = !allowNetwork
+      ? "WITNESS_LOCAL_PINNED_REMOTE_UNVERIFIED"
+      : witnessProbe?.statusCode !== 200
+        ? "PROBE_FAILED"
+        : verification.valid ? "WITNESS_VERIFIED" : `WITNESS_${verification.reason}`;
+    const receipt = {
+      schema: "NEXINUS_ATMOS_WITNESS_OBSERVATION/v1",
+      nodeId: node.nodeId,
+      displayName: node.displayName,
+      targetUrl: node.declaredCanonicalUrl,
+      protocol: node.protocol,
+      authorization: allowNetwork ? { operatorInitiated: true, authorizationReference, authorizedBy, allowNetwork: true } : { operatorInitiated: false, allowNetwork: false },
+      witnessProbe: witnessProbe && { statusCode: witnessProbe.statusCode, bodySha256: witnessProbe.bodySha256, schema: witnessProbe.parsed?.schema ?? null, error: witnessProbe.error ?? null },
+      verification,
+      status,
+      boundary: "Quantus is an independent signed observer. This result is not authority, permission, adjudication, or a Tesseract-A Core verification.",
+    };
+    await writeFile(resolve(receiptDir, `${slug}.observation.json`), `${JSON.stringify(receipt, null, 2)}\n`, { mode: 0o600 });
+    results.push({ nodeId: node.nodeId, displayName: node.displayName, endpoint: node.declaredCanonicalUrl, status, publicKeyFingerprintSha256: expectedNode.publicKeyFingerprintSha256 });
+    console.log(JSON.stringify(results.at(-1)));
+    continue;
+  }
+  const manifest = JSON.parse(await readFile(resolve(manifestDir, `${slug}.signed.json`), "utf8"));
   const local = verifySignedManifest(manifest, expectedNode.publicKeyFingerprintSha256);
   const endpoint = new URL(node.declaredCanonicalUrl);
   if (endpoint.protocol !== "https:") throw new Error(`${node.nodeId} endpoint is not HTTPS`);
@@ -128,7 +162,8 @@ const report = {
   policy: { synchronizedRequires: "served-fingerprint-and-signed-health-and-artifact-hash", headAloneIsNotSynchronized: true },
   results,
   counts: {
-    verified: results.filter((item) => item.status === "VERIFIED").length,
+    verified: results.filter((item) => item.status === "VERIFIED" || item.status === "WITNESS_VERIFIED").length,
+    witnessVerified: results.filter((item) => item.status === "WITNESS_VERIFIED").length,
     localSignedRemoteUnverified: results.filter((item) => item.status === "LOCAL_SIGNED_REMOTE_UNVERIFIED").length,
     remoteIdentityMismatch: results.filter((item) => item.status === "REMOTE_IDENTITY_MISMATCH").length,
     remoteIdentityNotPublished: results.filter((item) => item.status === "REMOTE_IDENTITY_NOT_PUBLISHED").length,

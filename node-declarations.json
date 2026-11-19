@@ -38,6 +38,26 @@
       ]
     },
     {
+      "nodeId": "QUANTUS",
+      "displayName": "Quantus Witness Console",
+      "declaredRegion": "operator-declared",
+      "declaredRole": "independent witness · signed observation",
+      "declaredCanonicalUrl": "https://quantus.nexinus.net",
+      "capabilities": [
+        "SIGNED_OBSERVATION",
+        "WITNESS_RECEIPTS",
+        "NO_REMOTE_PROBES"
+      ],
+      "protocol": "QUANTUS_WITNESS_STATUS/v1",
+      "verificationMode": "QUANTUS_SIGNED_STATUS",
+      "distinctFrom": [
+        "TESSERACT-TERMINUS",
+        "TESSERACT-A",
+        "TESSERACT-A-CORE"
+      ],
+      "boundary": "Quantus observes and signs status; it does not grant authority, adjudicate, or mutate mesh state."
+    },
+    {
       "nodeId": "XINUS-CLARITY",
       "displayName": "XinUS-Clarity",
       "declaredRegion": "Ireland",
