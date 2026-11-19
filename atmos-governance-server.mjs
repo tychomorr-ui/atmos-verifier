@@ -4,16 +4,12 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { dirname, resolve } from "node:path";
 import { canonicalJson, publicKeyFingerprint, sha256Hex } from "./atmos-canonical.mjs";
+import { isCanonicalNodeId } from "./atmos-governance-identities.mjs";
 
 const keyPath = process.env.ARCHANGEL_KEY_PATH;
 const statePath = process.env.ARCHANGEL_STATE_PATH || "/var/lib/atmos-governance/seen.json";
 const port = Number(process.env.ARCHANGEL_GOVERNANCE_PORT || 8787);
 if (!keyPath) throw new Error("Set ARCHANGEL_KEY_PATH");
-
-const CANONICAL_NODE_IDS = new Set([
-  "ROOT-GATE", "TESSERACT-TERMINUS", "XINUS-CLARITY", "MONARCH-OS", "TESSERACT-A",
-  "KEIRA", "VALKYRIE", "ARCHANGEL", "PROJECT-RECLAIM", "IWA-SAGE", "RESONATE-EARTH",
-]);
 
 const privateKey = createPrivateKey(await readFile(keyPath));
 const publicKeyPem = createPublicKey(privateKey).export({ format: "pem", type: "spki" }).toString();
@@ -108,7 +104,7 @@ const server = createServer(async (incoming, outgoing) => {
     return;
   }
   if (action === "ADMIT") {
-    if (CANONICAL_NODE_IDS.has(request.nodeId)) {
+    if (isCanonicalNodeId(request.nodeId)) {
       send(outgoing, 409, decisionFor(action, requestHash, checked.requesterFingerprint, nonce, "REJECTED", "CANONICAL_NODE"));
       return;
     }

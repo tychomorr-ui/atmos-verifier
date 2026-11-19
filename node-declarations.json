@@ -3,7 +3,7 @@
   "manifestVersion": "ATMOS-1.1.1",
   "protocol": "Ed25519-canonical-json",
   "signerReference": "operator-atmos-ed25519-controlled-20261027",
-  "boundary": "Declarations select names and URLs. They do not prove the remote host serves this key.",
+  "boundary": "Unsigned declarations describe service roles and select legacy probe URLs; they do not enroll keys, bind identities, or prove a remote host serves a key.",
   "nodes": [
     {
       "nodeId": "ROOT-GATE",
@@ -21,41 +21,17 @@
     },
     {
       "nodeId": "TESSERACT-TERMINUS",
-      "displayName": "Tesseract-Terminus",
+      "displayName": "TESSERACT-TERMINUS (legacy signed record)",
       "declaredRegion": "Spain",
-      "declaredRole": "provenance · anchoring · Mirror",
+      "declaredRole": "legacy signed provenance record; current console binding unresolved",
       "declaredCanonicalUrl": "https://terminus.nexinus.net",
       "capabilities": [
-        "PROVENANCE",
-        "ANCHORING",
-        "MIRROR"
+        "LEGACY_SIGNED_CLAIMS"
       ],
       "distinctFrom": [
         "TESSERACT-A"
       ],
-      "supersededCanonicalUrls": [
-        "https://universaltruth.life"
-      ]
-    },
-    {
-      "nodeId": "QUANTUS",
-      "displayName": "Quantus Witness Console",
-      "declaredRegion": "operator-declared",
-      "declaredRole": "independent witness · signed observation",
-      "declaredCanonicalUrl": "https://quantus.nexinus.net",
-      "capabilities": [
-        "SIGNED_OBSERVATION",
-        "WITNESS_RECEIPTS",
-        "NO_REMOTE_PROBES"
-      ],
-      "protocol": "QUANTUS_WITNESS_STATUS/v1",
-      "verificationMode": "QUANTUS_SIGNED_STATUS",
-      "distinctFrom": [
-        "TESSERACT-TERMINUS",
-        "TESSERACT-A",
-        "TESSERACT-A-CORE"
-      ],
-      "boundary": "Quantus observes and signs status; it does not grant authority, adjudicate, or mutate mesh state."
+      "identityMapping": "UNRESOLVED: this historical signed record and pin have not been reattributed to the current Tesseract-Terminus console at https://universaltruth.life."
     },
     {
       "nodeId": "XINUS-CLARITY",
@@ -87,22 +63,22 @@
     },
     {
       "nodeId": "TESSERACT-A",
-      "displayName": "Tesseract Mirror",
+      "displayName": "TESSERACT-A (legacy signed record)",
       "declaredRegion": "Frankfurt",
-      "declaredRole": "truth substrate · truth point",
+      "declaredRole": "legacy signed record; mapping to Mirror or Core unresolved",
       "declaredCanonicalUrl": "https://tesseract.nexinus.net",
       "capabilities": [
-        "TRUTH_SUBSTRATE",
-        "TRUTH_POINT"
+        "LEGACY_SIGNED_CLAIMS"
       ],
       "distinctFrom": [
         "TESSERACT-TERMINUS",
         "TESSERACT-A-CORE"
       ],
-      "capabilityBoundary": "Tesseract Mirror is the constellation node. It is not the Tesseract-A Core verifier capability associated with ARCHANGEL.",
+      "capabilityBoundary": "Tesseract Mirror and Tesseract-A Core are distinct services; legacy label alone establishes neither identity.",
       "supersededCanonicalUrls": [
         "https://tesseract.manus.space"
-      ]
+      ],
+      "identityMapping": "UNRESOLVED: the historical TESSERACT-A signed label and pin are not assigned to Tesseract Mirror or Tesseract-A Core."
     },
     {
       "nodeId": "KEIRA",
@@ -135,7 +111,7 @@
       "nodeId": "ARCHANGEL",
       "displayName": "ARCHANGEL",
       "declaredRegion": "London",
-      "declaredRole": "control plane · mesh governance",
+      "declaredRole": "conductor · control plane · mesh governance",
       "declaredCanonicalUrl": "https://archangel.nexinus.net",
       "capabilities": [
         "CONTROL_PLANE",
@@ -187,6 +163,68 @@
       "supersededCanonicalUrls": [
         "https://resonate-earth.live"
       ]
+    },
+    {
+      "nodeId": "QUANTUS",
+      "displayName": "Quantus Witness Console",
+      "declaredRegion": "operator-declared",
+      "declaredRole": "independent witness · observation only",
+      "declaredCanonicalUrl": "https://quantus.nexinus.net",
+      "protocol": "QUANTUS_WITNESS_STATUS/v1",
+      "verificationMode": "QUANTUS_SIGNED_STATUS",
+      "adapter": "QUANTUS_WITNESS_STATUS/v1",
+      "healthPaths": [
+        "/v1/health",
+        "/v1/status",
+        "/.well-known/atmos-health.json"
+      ],
+      "maxAgeSeconds": 300,
+      "maxFutureSkewSeconds": 30,
+      "capabilities": [
+        "WITNESS_STATUS",
+        "SIGNED_OBSERVATION",
+        "NO_REMOTE_PROBES"
+      ],
+      "distinctFrom": [
+        "TESSERACT-TERMINUS",
+        "TESSERACT-A",
+        "TESSERACT-A-CORE",
+        "TESSERACT-MIRROR"
+      ],
+      "boundary": "Quantus signs status; it does not grant authority, adjudicate, or mutate mesh state.",
+      "identityMapping": "A public key and SPKI fingerprint were recorded from an observation; independent operator confirmation and manifest/artifact binding remain required."
+    }
+  ],
+  "services": [
+    {
+      "serviceId": "ARCHANGEL-CONDUCTOR",
+      "displayName": "Archangel conductor",
+      "url": "https://archangel.nexinus.net",
+      "boundary": "Conductor; not a witness or verifier."
+    },
+    {
+      "serviceId": "QUANTUS-WITNESS",
+      "displayName": "Quantus Witness Console",
+      "url": "https://quantus.nexinus.net",
+      "boundary": "Independent witness; raw observation is not verification or authority."
+    },
+    {
+      "serviceId": "TESSERACT-TERMINUS-CONSOLE",
+      "displayName": "Tesseract-Terminus sovereign provenance console",
+      "url": "https://universaltruth.life",
+      "identityBinding": "UNRESOLVED: no legacy pin reattributed"
+    },
+    {
+      "serviceId": "TESSERACT-MIRROR",
+      "displayName": "Tesseract Mirror",
+      "url": "https://tesseract.nexinus.net",
+      "identityBinding": "UNRESOLVED: no legacy TESSERACT-A pin reattributed"
+    },
+    {
+      "serviceId": "TESSERACT-A-CORE",
+      "displayName": "Tesseract-A Core verifier",
+      "url": null,
+      "identityBinding": "UNRESOLVED: URL and identity have not been supplied"
     }
   ]
 }

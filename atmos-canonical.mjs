@@ -25,7 +25,7 @@ export function unsignedPayload(manifest) {
   return payload;
 }
 
-export function verifySignedManifest(manifest, expectedFingerprint) {
+export function verifySignedManifest(manifest, expectedFingerprint, expectedManifestPayloadSha256) {
   const fingerprint = publicKeyFingerprint(manifest.identity.publicKeyPem);
   const payload = canonicalJson(unsignedPayload(manifest));
   const payloadHash = sha256Hex(payload);
@@ -33,12 +33,14 @@ export function verifySignedManifest(manifest, expectedFingerprint) {
   const fingerprintMatchesManifest = fingerprint === manifest.identity.identityHash && fingerprint === manifest.hashes?.publicKeyFingerprintSha256;
   const fingerprintMatchesExpected = !expectedFingerprint || fingerprint === expectedFingerprint;
   const payloadMatches = payloadHash === manifest.payloadHash;
+  const payloadMatchesExpected = !expectedManifestPayloadSha256 || payloadHash === expectedManifestPayloadSha256;
   return {
-    valid: signatureValid && fingerprintMatchesManifest && fingerprintMatchesExpected && payloadMatches,
+    valid: signatureValid && fingerprintMatchesManifest && fingerprintMatchesExpected && payloadMatches && payloadMatchesExpected,
     publicKeyFingerprintSha256: fingerprint,
     manifestPayloadSha256: payloadHash,
     signatureValid,
     payloadMatches,
+    payloadMatchesExpected,
     fingerprintMatchesManifest,
     fingerprintMatchesExpected,
   };

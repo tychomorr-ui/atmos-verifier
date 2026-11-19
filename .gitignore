@@ -4,3 +4,6 @@
 keys/
 gate4-keys/
 unclassified-keys/
+atmos-sync-report.json
+verification-receipts/
+tests/.tmp-*/
